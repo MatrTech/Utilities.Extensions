@@ -43,6 +43,46 @@ namespace MatrTech.Utilities.Extensions.Common.UnitTests
 
             var result = foo.IsNullOrWhiteSpace();
 
+            result.Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void IsNullOrWhiteSpace_StringEmpty_True()
+        {
+            string foo = string.Empty;
+
+            var result = foo.IsNullOrWhiteSpace();
+
+            result.Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void IsNullOrWhiteSpace_StringOnlyWhiteSpace_True()
+        {
+            string foo = "    ";
+
+            var result = foo.IsNullOrWhiteSpace();
+
+            result.Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void IsNullOrWhiteSpace_StringWhiteSpaceEscapes_True()
+        {
+            string foo = "\t\r\n";
+
+            var result = foo.IsNullOrWhiteSpace();
+
+            result.Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void IsNullOrWhiteSpace_StringFilled_False()
+        {
+            string foo = "hello world";
+
+            var result = foo.IsNullOrWhiteSpace();
+
             result.Should().BeFalse();
         }
     }

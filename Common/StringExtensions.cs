@@ -15,6 +15,11 @@ namespace MatrTech.Utilities.Extensions.Common
             return string.IsNullOrEmpty(source);
         }
 
+        /// <summary>
+        /// Indicates whether a specified string is null, empty or consists only of white-space characters.
+        /// </summary>
+        /// <param name="source">The string to test.</param>
+        /// <returns>true if the value parameter is null, an empty string ("") or if value consists exclusively of white-space characters.
         public static bool IsNullOrWhiteSpace([NotNullWhen(false)] this string? source)
         {
             return string.IsNullOrWhiteSpace(source);
