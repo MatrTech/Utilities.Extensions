@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{ED294816-EB0D-4DEB-9F93-2907028B1FC9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Utilities.Extensions.Common.csproj", "{ED294816-EB0D-4DEB-9F93-2907028B1FC9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{550E292C-BCF8-409D-9A71-462340C7172B}"
 EndProject
@@ -46,6 +46,18 @@ Global
 		{A2038152-4EA9-4F0D-A8AE-DFA4CE0BD500}.Release|x64.Build.0 = Release|Any CPU
 		{A2038152-4EA9-4F0D-A8AE-DFA4CE0BD500}.Release|x86.ActiveCfg = Release|Any CPU
 		{A2038152-4EA9-4F0D-A8AE-DFA4CE0BD500}.Release|x86.Build.0 = Release|Any CPU
+		{BE7EAF24-C779-4532-A7C8-03D9C58DC37E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE7EAF24-C779-4532-A7C8-03D9C58DC37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE7EAF24-C779-4532-A7C8-03D9C58DC37E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BE7EAF24-C779-4532-A7C8-03D9C58DC37E}.Debug|x64.Build.0 = Debug|Any CPU
+		{BE7EAF24-C779-4532-A7C8-03D9C58DC37E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BE7EAF24-C779-4532-A7C8-03D9C58DC37E}.Debug|x86.Build.0 = Debug|Any CPU
+		{BE7EAF24-C779-4532-A7C8-03D9C58DC37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE7EAF24-C779-4532-A7C8-03D9C58DC37E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE7EAF24-C779-4532-A7C8-03D9C58DC37E}.Release|x64.ActiveCfg = Release|Any CPU
+		{BE7EAF24-C779-4532-A7C8-03D9C58DC37E}.Release|x64.Build.0 = Release|Any CPU
+		{BE7EAF24-C779-4532-A7C8-03D9C58DC37E}.Release|x86.ActiveCfg = Release|Any CPU
+		{BE7EAF24-C779-4532-A7C8-03D9C58DC37E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A2038152-4EA9-4F0D-A8AE-DFA4CE0BD500} = {550E292C-BCF8-409D-9A71-462340C7172B}
