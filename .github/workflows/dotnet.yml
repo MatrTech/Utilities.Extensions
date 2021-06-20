@@ -28,5 +28,5 @@ jobs:
       working-directory: Common
       run: dotnet build --no-restore
     - name: Test
-      working-directory: test\Common
+      working-directory: test/Common
       run: dotnet test --no-build --verbosity normal
