@@ -22,7 +22,8 @@ jobs:
         dotnet-version: 6.0.x
         include-prerelease: true
     - name: Restore dependencies
-      run: dotnet restore .\Common
+      working-directory: Common
+      run: dotnet restore 
     - name: Build dotnet
       run: dotnet build --no-restore
     - name: Test
