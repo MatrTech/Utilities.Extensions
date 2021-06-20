@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <DefaultNamespace>MatrTech.Utilities.Extensions.Common.UnitTests</DefaultNamespace>
+    <RootNamespace>MatrTech.Utilities.Extensions.Common.UnitTests</RootNamespace>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\Common.csproj" />
+    <ProjectReference Include="..\..\Common\Utilities.Extensions.Common.csproj" />
   </ItemGroup>
 
 </Project>
