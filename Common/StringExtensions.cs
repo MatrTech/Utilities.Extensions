@@ -33,7 +33,7 @@ namespace MatrTech.Utilities.Extensions.Common
         /// <param name="_"></param>
         /// <param name="length">Is treated as a absoluut value so negative values will be converted to their positive counterparts</param>
         /// <param name="except"></param>
-        /// <returns></returns>
+        /// <returns>A randomly generated string</returns>
         public static string Random(this string? _, int length, params char[] except)
         {
             var rnd = new Random();
