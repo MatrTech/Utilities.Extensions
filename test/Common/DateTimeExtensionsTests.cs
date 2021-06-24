@@ -17,7 +17,7 @@ namespace MatrTech.Utilities.Extensions.Common.UnitTests
         [DataRow(DayOfWeek.Friday, 4)]
         [DataRow(DayOfWeek.Saturday, 5)]
         [DataRow(DayOfWeek.Sunday, 6)]
-        public void NextDayOfWeek_SourceAsMonday_GetsNextDayOfWeek(DayOfWeek dayOfWeek, int offset)
+        public void NextDayOfWeek_SourceEachDayOfWeek_GetsNextDayOfWeek(DayOfWeek dayOfWeek, int offset)
         {
             var foo = new DateTime(2021, 6, 21);
 
@@ -35,7 +35,7 @@ namespace MatrTech.Utilities.Extensions.Common.UnitTests
         [DataRow(DayOfWeek.Friday, -3)]
         [DataRow(DayOfWeek.Saturday, -2)]
         [DataRow(DayOfWeek.Sunday, -1)]
-        public void PreviousDayOfWeek_SourceAsMonday_GetsPreviousDayOfWeek(DayOfWeek dayOfWeek, int offset)
+        public void PreviousDayOfWeek_SourceEachDayOfWeek_GetsPreviousDayOfWeek(DayOfWeek dayOfWeek, int offset)
         {
             var foo = new DateTime(2021, 6, 21);
 
@@ -50,11 +50,11 @@ namespace MatrTech.Utilities.Extensions.Common.UnitTests
         [DataRow(DayOfWeek.Monday, 21)]
         [DataRow(DayOfWeek.Friday, 18)]
         [DataRow(DayOfWeek.Wednesday, 23)]
-        public void StartOfWeek_SourceAsWednesday_GetsStartDateBasedOnDayOfWeek(DayOfWeek dayOfWeek, int day)
+        public void StartOfWeek_SourceRandomDays_GetsStartDateBasedOnDayOfWeek(DayOfWeek dayOfWeek, int day)
         {
             var foo = new DateTime(2021, 6, 23);
 
-            DateTime? result = foo.StartOfWeek(dayOfWeek);
+            var result = foo.StartOfWeek(dayOfWeek);
 
             result.Should().Be(new DateTime(2021, 6, day));
         }

@@ -8,65 +8,61 @@ namespace MatrTech.Utilities.Extensions.Common.UnitTests
     public class CharExtensionsTests
     {
         [TestMethod]
-        public void ToLower_CharUpper_TransformedToLower()
+        [DataRow('A', 'a')]
+        [DataRow('_', '_')]
+        [DataRow('a', 'a')]
+        public void ToLower_DiverseInput_TransformedToLower(char input, char output)
         {
-            char foo = 'A';
-
-            var lowered = foo.ToLower();
-
-            lowered.Should().Be('a');
+            var lowered = input.ToLower();
+            lowered.Should().Be(output);
         }
 
         [TestMethod]
-        public void ToUpper_CharLower_TransformedToUpper()
+        [DataRow('A', 'A')]
+        [DataRow('_', '_')]
+        [DataRow('a', 'A')]
+        public void ToUpper_DiverseInput_TransformedToUpper(char input, char output)
         {
-            char foo = 'a';
-
-            var upper = foo.ToUpper();
-
-            upper.Should().Be('A');
+            var upper = input.ToUpper();
+            upper.Should().Be(output);
         }
 
         [TestMethod]
-        public void IsDigit_NumericInput_True()
+        [DataRow('1', true)]
+        [DataRow('a', false)]
+        [DataRow('~', false)]
+        public void IsDigit_NumericInput_True(char input, bool expected)
         {
-            char foo = '1';
-
-            var isDigit = foo.IsDigit();
-
-            isDigit.Should().BeTrue();
+            var isDigit = input.IsDigit();
+            isDigit.Should().Be(expected);
         }
 
         [TestMethod]
-        public void IsDigit_SpecialCharInput_False()
+        [DataRow('-')]
+        [DataRow('+')]
+        [DataRow('~')]
+        public void IsDigit_SpecialCharInput_False(char input)
         {
-            char foo = '+';
-
-            var isDigit = foo.IsDigit();
-
+            var isDigit = input.IsDigit();
             isDigit.Should().BeFalse();
         }
 
         [TestMethod]
-        public void IsLetter_AlphanumericInput_True()
+        [DataRow('A')]
+        [DataRow('a')]
+        public void IsLetter_AlphanumericInput_True(char input)
         {
-            char foo = 'A';
-            char bar = 'a';
-
-            var isAlphaNumeric = foo.IsLetter();
-            isAlphaNumeric.Should().BeTrue();
-
-            isAlphaNumeric = bar.IsLetter();
+            var isAlphaNumeric = input.IsLetter();
             isAlphaNumeric.Should().BeTrue();
         }
 
         [TestMethod]
-        public void IsLetter_SpecialCharInput_False()
+        [DataRow('-')]
+        [DataRow('+')]
+        [DataRow('~')]
+        public void IsLetter_SpecialCharInput_False(char input)
         {
-            char foo = '-';
-
-            var isAlphaNumeric = foo.IsDigit();
-
+            var isAlphaNumeric = input.IsLetter();
             isAlphaNumeric.Should().BeFalse();
         }
     }
