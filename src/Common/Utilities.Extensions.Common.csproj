@@ -5,7 +5,7 @@
     <RootNamespace>MatrTech.Utilities.Extensions.Common</RootNamespace>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <OutputPath>..\..\..\local-packages</OutputPath>
+    <OutputPath>..\..\..\..\local-packages</OutputPath>
     <Nullable>enable</Nullable>
 
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
