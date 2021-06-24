@@ -36,8 +36,8 @@ namespace MatrTech.Utilities.Extensions.Common
         /// <returns>A randomly generated string</returns>
         public static string Random(this string? _, int length, params char[] except)
         {
-            if(length < 0) 
-                throw new ArgumentException($"Parameter length cannot be smaller then 0. Value: {length} is therefore invalid.")
+            if (length < 0)
+                throw new ArgumentException($"Parameter length cannot be smaller then 0. Value: {length} is therefore invalid.");
 
 
             var rnd = new Random();
