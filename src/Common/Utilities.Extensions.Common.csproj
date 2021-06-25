@@ -17,7 +17,7 @@
     <BuildVersion>$([System.DateTime]::Now.ToString("yyMMddHHmm"))</BuildVersion>
     <Version>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(BuildVersion)</Version>
 
-    <PackageId>MatrTech.Utilities.Test</PackageId>
+    <PackageId>MatrTech.Utilities.Extensions.Common</PackageId>
     <Authors>MatrTech</Authors>
     <Company>MatrTech</Company>
     <Copyright>MatrTech 2021</Copyright>
