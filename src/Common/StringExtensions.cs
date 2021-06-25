@@ -13,9 +13,7 @@ namespace MatrTech.Utilities.Extensions.Common
         /// <param name="source">The string to test.</param>
         /// <returns>true if the value parameter is null or an empty string(""); otherwise, false.</returns>
         public static bool IsNullOrEmpty([NotNullWhen(false)] this string? source)
-        {
-            return string.IsNullOrEmpty(source);
-        }
+            => string.IsNullOrEmpty(source);
 
         /// <summary>
         /// Indicates whether a specified string is null, empty or consists only of white-space characters.
@@ -23,9 +21,7 @@ namespace MatrTech.Utilities.Extensions.Common
         /// <param name="source">The string to test.</param>
         /// <returns>true if the value parameter is null, an empty string ("") or if value consists exclusively of white-space characters.
         public static bool IsNullOrWhiteSpace([NotNullWhen(false)] this string? source)
-        {
-            return string.IsNullOrWhiteSpace(source);
-        }
+            => string.IsNullOrWhiteSpace(source);
 
         /// <summary>
         /// A randomly generated string is created based on the following seed: ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
@@ -56,10 +52,10 @@ namespace MatrTech.Utilities.Extensions.Common
 
             return string.Join(string.Empty, Enumerable.Range(0, length)
                 .Select(c => chars[rnd.Next(0, chars.Count)])
-                .Select(c => c.IsLetter() 
+                .Select(c => c.IsLetter()
                     ? rnd.Next(0, 1) == 0
                         ? c.ToLower()
-                        : c 
+                        : c
                     : c));
         }
     }

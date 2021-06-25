@@ -1,4 +1,6 @@
 using System.Linq;
+using FluentAssertions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MatrTech.Utilities.Extensions.Common.UnitTests
 {
