@@ -1,13 +1,12 @@
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using FluentAssertions;
 
 namespace MatrTech.Utilities.Extensions.Common.UnitTests
 {
     [TestClass]
     public class GenericExtensionsTests
     {
-
         [TestMethod]
         public void BetweenDate_DateInBetweenExclusive_True()
         {
@@ -26,6 +25,67 @@ namespace MatrTech.Utilities.Extensions.Common.UnitTests
             var end = 8;
 
             source.Between(start, end).Should().BeTrue();
+        }
+
+        [TestMethod]
+        [DataRow(default(string))]
+        [DataRow(null)]
+        public void IsNullOrDefault_StringNullOrDefault_True(string source)
+        {
+            source.IsNull().Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void IsNullOrDefault_DefaultInt_True()
+        {
+            int source = default;
+            source.IsNullOrDefault().Should().BeTrue();
+        }
+
+        public void IsNullOrDefault_DefaultFloat_True()
+        {
+            float source = default;
+            source.IsNullOrDefault().Should().BeTrue();
+        }
+
+        public void IsNullOrDefault_DefaultDouble_True()
+        {
+            double source = default;
+            source.IsNullOrDefault().Should().BeTrue();
+        }
+
+        public void IsNullOrDefault_DefaultLong_True()
+        {
+            long source = default;
+            source.IsNullOrDefault().Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void IsNullOrDefault_NullableIntDefault_True()
+        {
+            int? source = default;
+            source.IsNullOrDefault().Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void IsNullOrDefault_NullableInt0_True()
+        {
+            int? source = 0;
+            source.IsNullOrDefault().Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void IsNullOrDefault_DefaultDateTime_True()
+        {
+            DateTime source = default;
+            source.IsNullOrDefault().Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void IsNullOrDefault_NullableDateTimeDefault_True()
+        {
+            DateTime? source = default;
+            source.IsNullOrDefault().Should().BeTrue();
         }
     }
 }
