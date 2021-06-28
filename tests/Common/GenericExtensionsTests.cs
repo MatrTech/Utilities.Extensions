@@ -42,18 +42,21 @@ namespace MatrTech.Utilities.Extensions.Common.UnitTests
             source.IsNullOrDefault().Should().BeTrue();
         }
 
+        [TestMethod]
         public void IsNullOrDefault_DefaultFloat_True()
         {
             float source = default;
             source.IsNullOrDefault().Should().BeTrue();
         }
 
+        [TestMethod]
         public void IsNullOrDefault_DefaultDouble_True()
         {
             double source = default;
             source.IsNullOrDefault().Should().BeTrue();
         }
 
+        [TestMethod]
         public void IsNullOrDefault_DefaultLong_True()
         {
             long source = default;
