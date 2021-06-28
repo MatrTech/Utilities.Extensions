@@ -30,7 +30,7 @@ namespace MatrTech.Utilities.Extensions.Common.UnitTests
         [TestMethod]
         [DataRow(default(string))]
         [DataRow(null)]
-        public void IsNullOrDefault_StringNullOrDefault_True(string source)
+        public void IsNull_StringNullOrDefault_True(string source)
         {
             source.IsNull().Should().BeTrue();
         }
@@ -90,5 +90,35 @@ namespace MatrTech.Utilities.Extensions.Common.UnitTests
             DateTime? source = default;
             source.IsNullOrDefault().Should().BeTrue();
         }
+
+        [TestMethod]
+        public void IsNull_TestClassNull_True()
+        {
+            TestClass source = null!;
+            source.IsNull().Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void IsNull_NullableTestClassNull_True()
+        {
+            TestClass? source = null;
+            source.IsNull().Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void IsNull_TestClassNotNull_False()
+        {
+            TestClass source = new TestClass();
+            source.IsNull().Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void IsNull_NullableTestClassNotNull_False()
+        {
+            TestClass? source = new TestClass();
+            source.IsNull().Should().BeFalse();
+        }
+
+        private class TestClass {}
     }
 }
