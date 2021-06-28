@@ -30,10 +30,7 @@ namespace MatrTech.Utilities.Extensions.Common
         /// <typeparam name="T">The type of <paramref name="source"/></typeparam>
         /// <returns>True if default otherwise false.</returns>
         public static bool IsNullOrDefault<T>(this T source)
-            where T : struct
-        {
-            return Equals(source, default(T));
-        }
+            where T : struct => Equals(source, default(T));
 
         /// <summary>
         /// Checks if <paramref name="source"/> is of default or null.
@@ -42,10 +39,7 @@ namespace MatrTech.Utilities.Extensions.Common
         /// <typeparam name="T">The type of <paramref name="source"/></typeparam>
         /// <returns>True if default or null, otherwise false.</returns>
         public static bool IsNullOrDefault<T>(this T? source)
-            where T : struct
-        {
-            return source == null || Equals(source, default(T));
-        }
+            where T : struct => source == null || Equals(source, default(T));
 
         /// <summary>
         /// Checks if <paramref name="source"/> is null.
@@ -54,9 +48,6 @@ namespace MatrTech.Utilities.Extensions.Common
         /// <typeparam name="T">The type of <paramref name="source"/></typeparam>
         /// <returns>True if null, otherwise false.</returns>
         public static bool IsNull<T>(this T? source)
-            where T : class
-        {
-            return source == null;
-        }
+            where T : class => source == null;
     }
 }
