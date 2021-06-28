@@ -22,5 +22,23 @@ namespace MatrTech.Utilities.Extensions.Common
                 ? dsource >= dstart && dsource <= dend
                 : dsource > dstart && dsource < dend;
         }
+
+        public static bool IsNullOrDefault<T>(this T source)
+            where T : struct
+        {
+            return Equals(source, default(T));
+        }
+
+        public static bool IsNullOrDefault<T>(this T? source)
+            where T : struct
+        {
+            return source == null || Equals(source, default(T));
+        }
+
+        public static bool IsNull<T>(this T? source)
+            where T : class
+        {
+            return source == null;
+        }
     }
 }
