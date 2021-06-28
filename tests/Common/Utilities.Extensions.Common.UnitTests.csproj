@@ -4,6 +4,7 @@
     <TargetFrameworks>net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
     <RootNamespace>MatrTech.Utilities.Extensions.Common.UnitTests</RootNamespace>
     <IsPackable>false</IsPackable>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,5 +18,4 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\Common\Utilities.Extensions.Common.csproj" />
   </ItemGroup>
-
 </Project>
