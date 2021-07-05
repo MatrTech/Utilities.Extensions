@@ -111,10 +111,12 @@ namespace MatrTech.Utilities.Extensions.Common.UnitTests
         }
 
         [TestMethod]
-        public void GetNumericValue()
+        [DataRow("0", 0.0)]
+        [DataRow("4", 4.0)]
+        [DataRow("9", 9.0)]
+        public void GetNumericValue_SomeChar_ShouldBeExpectedResult(string c, double expectedResult)
         {
-            char c = '0';
-            c.GetNumericValue();
+            c.GetNumericValue().Should().Be(expectedResult);
         }
     }
 }

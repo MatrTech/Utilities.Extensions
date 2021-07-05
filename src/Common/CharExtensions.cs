@@ -92,5 +92,24 @@ namespace MatrTech.Utilities.Extensions.Common
         /// </exception>
         public static int ConvertToUtf32(this string value, int index = 0)
             => char.ConvertToUtf32(value, index);
+
+        /// <summary>
+        /// Converts the numeric Unicode character at the specified position in a specified
+        /// string to a double-precision floating point number.
+        /// </summary>
+        /// <param name="s"><see cref="string"/></param>
+        /// <param name="index">The character position in <paramref name="s"/></param>
+        /// <returns>
+        ///     The numeric value of the character at position index in s if that character represents
+        ///     a number; otherwise, -1.
+        /// </returns>
+        /// <exception cref="System.ArgumentNullException">
+        /// <paramref name="s"/> is null.
+        /// </exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">
+        /// <paramref name="index"/> is less than zero or greater than the length of <paramref name="s"/>
+        /// </exception>
+        public static double GetNumericValue(this string s, int index = 0)
+            => char.GetNumericValue(s, index);
     }
 }
