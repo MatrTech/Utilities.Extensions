@@ -156,5 +156,14 @@ namespace MatrTech.Utilities.Extensions.Common.UnitTests
             Func<double> func = () => "1".GetNumericValue(int.MaxValue);
             func.Should().Throw<ArgumentOutOfRangeException>();
         }
+
+        [TestMethod]
+        [DataRow('0', 0.0)]
+        [DataRow('4', 4.0)]
+        [DataRow('9', 9.0)]
+        public void GetNumericValueChar_SomeChar_ShouldBeExpectedResult(char c, double expectedResult)
+        {
+            c.GetNumericValue().Should().Be(expectedResult);
+        }
     }
 }

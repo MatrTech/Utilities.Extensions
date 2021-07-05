@@ -108,5 +108,14 @@ namespace MatrTech.Utilities.Extensions.Common
         /// </exception>
         public static double GetNumericValue(this string s, int index = 0)
             => char.GetNumericValue(s, index);
+
+        /// <summary>
+        /// Converts the specified numeric Unicode character to a double-precision floating
+        /// point number.
+        /// </summary>
+        /// <param name="c">The Unicode character to convert.</param>
+        /// <returns>The numeric value of c if that character represents a number; otherwise, -1.0.</returns>
+        public static double GetNumericValue(this char c)
+            => char.GetNumericValue(c);
     }
 }
