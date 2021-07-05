@@ -64,9 +64,6 @@ namespace MatrTech.Utilities.Extensions.Common
         /// The 21-bit Unicode code point represented by the character or surrogate pair
         /// at the position in the s parameter specified by the index parameter.
         /// </returns>
-        /// <exception cref="System.ArgumentNullException">
-        /// <paramref name="value"/> is null
-        /// </exception>
         public static int ConvertToUtf32(this char value)
             => char.ConvertToUtf32(value.ToString(), 0);
 

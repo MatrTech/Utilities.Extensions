@@ -1,5 +1,6 @@
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace MatrTech.Utilities.Extensions.Common.UnitTests
 {
@@ -81,6 +82,13 @@ namespace MatrTech.Utilities.Extensions.Common.UnitTests
         }
 
         [TestMethod]
+        public void ConvertFromUtf32_OutOfRange_ShouldThrowArgumentOutOfRangeException()
+        {
+            Func<string> func = () => 0x999999.ConvertFromUtf32();
+            func.Should().Throw<ArgumentOutOfRangeException>();
+        }
+
+        [TestMethod]
         [DataRow('A', 0x0041)]
         [DataRow('B', 0x0042)]
         [DataRow('C', 0x0043)]
@@ -111,12 +119,42 @@ namespace MatrTech.Utilities.Extensions.Common.UnitTests
         }
 
         [TestMethod]
+        public void ConvertToUtf32StringVersion_IndexOutOfRange_ShouldThrowArgumentException()
+        {
+            Func<int> func = () => "some string".ConvertToUtf32(int.MaxValue);
+            func.Should().Throw<ArgumentOutOfRangeException>();
+        }
+
+        [TestMethod]
+        public void ConvertToUtf32StringVersion_StringNull_ShouldThrowArgumentNullException()
+        {
+            string str = null!;
+            Func<int> func = () => str.ConvertToUtf32();
+            func.Should().Throw<ArgumentNullException>();
+        }
+
+        [TestMethod]
         [DataRow("0", 0.0)]
         [DataRow("4", 4.0)]
         [DataRow("9", 9.0)]
         public void GetNumericValue_SomeChar_ShouldBeExpectedResult(string c, double expectedResult)
         {
             c.GetNumericValue().Should().Be(expectedResult);
+        }
+
+        [TestMethod]
+        public void GetNumericValue_StringNull_ShouldThrowArgumentNullException()
+        {
+            string str = null!;
+            Func<double> func = () => str.GetNumericValue();
+            func.Should().Throw<ArgumentNullException>();
+        }
+
+        [TestMethod]
+        public void GetNumericValue_IndexOutOfRange_ShouldThrowArgumentOutOfRangeException()
+        {
+            Func<double> func = () => "1".GetNumericValue(int.MaxValue);
+            func.Should().Throw<ArgumentOutOfRangeException>();
         }
     }
 }
