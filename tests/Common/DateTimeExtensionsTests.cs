@@ -4,7 +4,7 @@ using System;
 
 using System.Drawing;
 
-namespace MatrTech.Utilities.Extensions.Common.UnitTests
+namespace Matr.Utilities.Extensions.Common.UnitTests
 {
     [TestClass]
     public class DateTimeExtensionsTests

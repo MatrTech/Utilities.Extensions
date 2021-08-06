@@ -1,6 +1,6 @@
 using System;
 
-namespace MatrTech.Utilities.Extensions.Common
+namespace Matr.Utilities.Extensions.Common
 {
     public static class GenericExtensions
     {
