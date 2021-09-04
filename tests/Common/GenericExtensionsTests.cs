@@ -2,7 +2,7 @@ using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace MatrTech.Utilities.Extensions.Common.UnitTests
+namespace Matr.Utilities.Extensions.Common.UnitTests
 {
     [TestClass]
     public class GenericExtensionsTests

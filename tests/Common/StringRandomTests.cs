@@ -2,7 +2,7 @@ using System.Linq;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace MatrTech.Utilities.Extensions.Common.UnitTests
+namespace Matr.Utilities.Extensions.Common.UnitTests
 {
     [TestClass]
     public class StringRandomTests
