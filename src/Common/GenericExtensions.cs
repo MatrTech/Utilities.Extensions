@@ -1,6 +1,6 @@
 using System;
 
-namespace MatrTech.Utilities.Extensions.Common
+namespace Matr.Utilities.Extensions.Common
 {
     public static class GenericExtensions
     {
@@ -22,5 +22,32 @@ namespace MatrTech.Utilities.Extensions.Common
                 ? dsource >= dstart && dsource <= dend
                 : dsource > dstart && dsource < dend;
         }
+
+        /// <summary>
+        /// Checks if <paramref name="source"/> is of default value.
+        /// </summary>
+        /// <param name="source">The value to check</param>
+        /// <typeparam name="T">The type of <paramref name="source"/></typeparam>
+        /// <returns>True if default otherwise false.</returns>
+        public static bool IsNullOrDefault<T>(this T source)
+            where T : struct => Equals(source, default(T));
+
+        /// <summary>
+        /// Checks if <paramref name="source"/> is of default or null.
+        /// </summary>
+        /// <param name="source">The value to check</param>
+        /// <typeparam name="T">The type of <paramref name="source"/></typeparam>
+        /// <returns>True if default or null, otherwise false.</returns>
+        public static bool IsNullOrDefault<T>(this T? source)
+            where T : struct => source == null || Equals(source, default(T));
+
+        /// <summary>
+        /// Checks if <paramref name="source"/> is null.
+        /// </summary>
+        /// <param name="source">The value to check</param>
+        /// <typeparam name="T">The type of <paramref name="source"/></typeparam>
+        /// <returns>True if null, otherwise false.</returns>
+        public static bool IsNull<T>(this T? source)
+            where T : class => source == null;
     }
 }

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
-namespace MatrTech.Utilities.Extensions.Common
+namespace Matr.Utilities.Extensions.Common
 {
     public static class StringExtensions
     {
