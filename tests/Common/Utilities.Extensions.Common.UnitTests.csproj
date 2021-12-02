@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\Utilities.Extensions.Common.csproj" />
+    <ProjectReference Include="..\..\src\Common\Utilities.Extensions.Common.csproj" />
   </ItemGroup>
 
 </Project>
