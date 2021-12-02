@@ -19,7 +19,7 @@ namespace Matr.Utilities.Extensions.Common.UnitTests
         [TestMethod]
         public void IsNullOrEmpty_StringNull_True()
         {
-            string foo = null;
+            string foo = null!;
 
             var result = foo.IsNullOrEmpty();
 
@@ -39,7 +39,7 @@ namespace Matr.Utilities.Extensions.Common.UnitTests
         [TestMethod]
         public void IsNullOrWhiteSpace_StringNull_True()
         {
-            string foo = null;
+            string foo = null!;
 
             var result = foo.IsNullOrWhiteSpace();
 
