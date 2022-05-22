@@ -7,3 +7,8 @@ Currently provided are:
 - DateTimeExtensions
 - GenericExtensions
 - StringExtensions
+
+
+[![.NET Build](https://github.com/MatrTech/Utilities.Extensions/actions/workflows/dotnet.yml/badge.svg)](https://github.com/MatrTech/Utilities.Extensions/actions/workflows/dotnet.yml)
+
+[![.NET Release](https://github.com/MatrTech/Utilities.Extensions/actions/workflows/release.yml/badge.svg)](https://github.com/MatrTech/Utilities.Extensions/actions/workflows/release.yml)
