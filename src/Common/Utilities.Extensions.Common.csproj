@@ -1,30 +1,29 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
-    <RootNamespace>Matr.Utilities.Extensions.Common</RootNamespace>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <OutputPath>..\..\..\..\local-packages</OutputPath>
-    <Nullable>enable</Nullable>
+	<PropertyGroup>
+		<TargetFrameworks>net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
+		<RootNamespace>Matr.Utilities.Extensions.Common</RootNamespace>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<OutputPath>..\..\..\..\local-packages</OutputPath>
+		<Nullable>enable</Nullable>
+		<OutputType>Library</OutputType>
 
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <WarningsAsErrors />
- 
-    <PackageId>MatrTech.Utilities.Extensions.Common</PackageId>
-    <Authors>MatrTech</Authors>
-    <Company>MatrTech</Company>
-    <Copyright>MatrTech 2021</Copyright>
-  </PropertyGroup>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<WarningsAsErrors />
+		<PackageId>MatrTech.Utilities.Extensions.Common</PackageId>
+		<Authors>MatrTech</Authors>
+		<Company>MatrTech</Company>
+		<Copyright>MatrTech 2021</Copyright>
+	</PropertyGroup>
 
-  <Target Name="SetVersion" BeforeTargets="Build">
-    <PropertyGroup>
-      <MajorVersion>0</MajorVersion>
-      <MinorVersion>0</MinorVersion>
-      <PatchVersion>1</PatchVersion>
-      <BuildVersion  Condition="'$(DesignTimeBuild)' != 'true' OR '$(BuildingProject)' == 'true'">$([System.DateTime]::Now.ToString("HHmmss"))</BuildVersion>
-      <PackageVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(BuildVersion)</PackageVersion>
-    </PropertyGroup>
-  </Target>
-  
+	<Target Name="SetVersion" BeforeTargets="Build">
+		<PropertyGroup>
+			<MajorVersion>0</MajorVersion>
+			<MinorVersion>1</MinorVersion>
+			<PatchVersion>1</PatchVersion>
+			<BuildVersion Condition="'$(DesignTimeBuild)' != 'true' OR '$(BuildingProject)' == 'true'">$([System.DateTime]::Now.ToString("MMddHHmmss"))</BuildVersion>
+			<PackageVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(BuildVersion)</PackageVersion>
+		</PropertyGroup>
+	</Target>
 </Project>

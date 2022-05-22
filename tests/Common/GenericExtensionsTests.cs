@@ -119,6 +119,7 @@ namespace Matr.Utilities.Extensions.Common.UnitTests
             source.IsNull().Should().BeFalse();
         }
 
-        private class TestClass {}
+        private class TestClass
+        { }
     }
 }
